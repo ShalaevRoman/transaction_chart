@@ -26,7 +26,13 @@ export default {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: '/'
+    baseURL: 'http://api.spending.gov.ua',
+    headers: {
+      common: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }
   },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

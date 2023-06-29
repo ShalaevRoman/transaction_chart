@@ -31,7 +31,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -43,7 +43,6 @@ export default {
   data() {
     return {
       drawer: false,
-      fixed: false,
       items: [
         {
           icon: 'mdi-apps',
@@ -54,5 +53,8 @@ export default {
       title: 'Transaction_chart',
     }
   },
+  async fetch () {
+    await this.$store.dispatch('transactionStore/getRegions')
+  }
 }
 </script>

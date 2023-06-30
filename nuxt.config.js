@@ -1,6 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  mode: 'static',
+  router: {
+    base: '/transaction_chart/'
+  },
+  ssr: false,
   head: {
     titleTemplate: '%s - transaction_chart',
     title: 'transaction_chart',
@@ -15,7 +20,10 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  css: [],
+  loading: { color: '#00E676' },
+  css: [
+    '@/node_modules/vuetify/dist/vuetify.css'
+  ],
   plugins: ['@/plugins/chart.js'],
   components: true,
   buildModules: [

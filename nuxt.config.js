@@ -34,7 +34,7 @@ export default {
     '@nuxtjs/axios'
   ],
   axios: {
-    baseURL: 'http://api.spending.gov.ua',
+    baseURL: 'https://api.spending.gov.ua',
     headers: {
       common: {
         Accept: 'application/json',

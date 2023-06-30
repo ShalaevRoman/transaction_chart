@@ -16,15 +16,15 @@ export const actions = {
     commit('SET_REGION_LIST', data)
   },
   async getTop100Transaction({ commit }, regionNum) {
-    const response = await this.$axios.get('/api/v2/api/transactions/top100/', {
+    const { data } = await this.$axios.get('/api/v2/api/transactions/top100/', {
       params: {
         region: regionNum
       }
     })
-    console.log(response)
-    commit('SER_TOP100_TRANSACTION', response)
+    commit('SER_TOP100_TRANSACTION', data)
   }
 }
 export const getters = {
-  regionList: state => state.regionList
+  regionList: state => state.regionList,
+  top100Transaction: state => state.top100Transaction
 }

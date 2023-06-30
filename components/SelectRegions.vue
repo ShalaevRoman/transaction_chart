@@ -7,14 +7,14 @@
       item-value="regionCode"
       class="ma-2"
       label="List of regions"
-      background-color="#363636"
+      background-color="secondary"
       hide-details
       solo
       @change="getTransaction()"
     ></v-select>
     <p
-      class="red--text"
       v-if="isAvailableRegion"
+      class="red--text"
     >
       Data for this region is not available
     </p>
@@ -48,5 +48,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

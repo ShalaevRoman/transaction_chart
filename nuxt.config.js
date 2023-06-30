@@ -16,7 +16,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   css: [],
-  plugins: [],
+  plugins: ['@/plugins/chart.js'],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -42,11 +42,20 @@ export default {
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: '#424242',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
+        },
+        light: {
+          primary: '#ffa450',
+          accent: '#a1e754',
+          secondary: '#d7d7d7',
+          success: '#6dff74',
+          info: '#7365ff',
+          warning: '#2e8ac0',
+          error: '#ff5e3c'
         }
       }
     }
